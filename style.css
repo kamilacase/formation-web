@@ -1,0 +1,3104 @@
+/* Theme Name: formation
+Description: formation theme by AFA multimédia
+Version: 0.1 
+Author: M.L
+formation theme by AFA  */
+
+
+/* //////////fonts */
+
+@font-face {
+    font-family: 'Ebrima';
+    src: url('/Maquette/font/Ebrima-Bold.eot');
+    src: url('/Maquette/font/Ebrima-Bold.eot?#iefix') format('embedded-opentype'), url('Maquette/font/Ebrima-Bold.woff2') format('woff2'), url('Maquette/font/Ebrima-Bold.woff') format('woff'), url('Maquette/font/Ebrima-Bold.ttf') format('truetype'), url('Maquette/font/Ebrima-Bold.svg#Ebrima-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Comfortaa';
+    src: url('/Maquette/font/Comfortaa-Regular.eot');
+    src: url('/Maquette/font/Comfortaa-Regular.eot?#iefix') format('embedded-opentype'), url('Maquette/font/Comfortaa-Regular.woff2') format('woff2'), url('Maquette/font/Comfortaa-Regular.woff') format('woff'), url('Maquette/font/Comfortaa-Regular.ttf') format('truetype'), url('Maquette/font/Comfortaa-Regular.svg#Comfortaa-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'afa';
+    src: url('/Maquette/font/AFA_0.otf');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gill_Sans_Nova';
+    src: url('/Maquette/font/GillSansNova.eot');
+    src: url('/Maquette/font/GillSansNova.eot?#iefix') format('embedded-opentype'), url('Maquette/font/GillSansNova.woff2') format('woff2'), url('maquette/font/GillSansNova.woff') format('woff'), url('GillSansNova.ttf') format('truetype'), url('maquette/font/GillSansNova.svg#GillSansNova') format('svg');
+    font-weight: 500;
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 1500px;
+    margin: auto;
+}
+
+h1,
+h2,
+h3 {
+    color: #0d325f;
+}
+
+.clear {
+    clear: both;
+}
+
+
+/* //////////Nav modal */
+
+.burger {
+    display: inline-block;
+    cursor: pointer;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-90deg) translate(-3px, 0px);
+    transform: rotate(-90deg) translate(-10px, 0px);
+}
+
+.change .bar2 {
+    -webkit-transform: rotate(-90deg) translate(-10px, 0px);
+    transform: rotate(-90deg) translate(1px, -10px);
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(90deg) translate(-8px, -8px);
+    transform: rotate(90deg) translate(-12px, -10px);
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+
+/* Modal Content */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0px;
+    border: 1px solid #888;
+    width: 50%;
+    font-family: 'Gill_Sans_Nova';
+    color: rgb(108, 108, 109);
+    text-align: center;
+    font-size: 1.5em;
+    position: relative;
+}
+
+.modal-content h2 a {
+    font-family: 'Comfortaa';
+    font-size: 25px;
+    text-decoration: none;
+    color: rgb(108, 108, 109);
+}
+
+.modal-content>ul>li>a {
+    text-decoration: none;
+    color: rgb(108, 108, 109);
+    padding-top: 25px;
+}
+
+.modal-content>ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0 1em 3em 0;
+}
+
+.modal-content>ul>li {
+    margin-top: 1em;
+    height: 30px;
+}
+
+.modal-content .blue:hover {
+    color: #278bca;
+    transition: 0.2s;
+}
+
+.modal-content .yellow:hover {
+    color: #A88417;
+    transition: 0.5s;
+}
+
+.modal-content .brown:hover {
+    color: #802C0E;
+    transition: 0.5s;
+}
+
+
+/* The Close Button */
+
+.croos {
+    position: relative;
+}
+
+.close {
+    color: #aaaaaa;
+    font-size: 60px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: -10px;
+}
+
+.close:hover {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+    -webkit-transition: -webkit-transform .2s;
+    -ms-transition: -ms-transform .2s;
+    transition: transform .2s;
+}
+
+.close:hover {
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+
+/* //////////header */
+
+header {
+    width: 100%;
+}
+
+.top {
+    overflow: auto;
+    height: 60px;
+    margin: 10px 0 5px 0;
+}
+
+.logo {
+    text-align: left;
+}
+
+.logo img {
+    float: left;
+}
+
+.logo p {
+    float: left;
+    margin: 1em 0 0 0;
+    font-family: 'Gill_Sans_Nova';
+    color: black;
+}
+
+.top nav {
+    float: right;
+    margin-top: 10px;
+    position: relative;
+}
+
+.top nav>p {
+    font-family: 'Gill_Sans_Nova';
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    right: 60px;
+    top: -12px;
+    font-size: 20px;
+}
+
+#myBtn {
+    margin-right: 15px;
+}
+
+.backBaneer {}
+
+.baneer {
+    background-color: #e8e8e8;
+    padding-bottom: 5em;
+}
+
+.baneer1 {
+    background-color: #141E60;
+    padding-bottom: 5em;
+    color: white;
+}
+
+.triangleBottom {
+    max-width: 100%;
+    width: 0;
+    height: 0;
+    border-left: 750px solid transparent;
+    border-right: 750px solid transparent;
+    border-top: 80px solid #e8e8e8;
+    margin-bottom: 10em;
+}
+
+.triangle-Bottom {
+    max-width: 100%;
+    width: 0;
+    height: 0;
+    border-left: 750px solid transparent;
+    border-right: 750px solid transparent;
+    border-top: 80px solid #141E60;
+    margin-bottom: 10em;
+}
+
+.lineBottom {
+    margin: -300px auto 50px;
+}
+
+.lineBottom2 {
+    margin: -2em auto 0;
+    position: relative;
+    z-index: 1;
+}
+
+.verticalLine2 {
+    width: 2px;
+    height: 250px;
+    background-color: #000;
+    margin: auto;
+}
+
+.lineTop1 {
+    margin: 50px auto -200px;
+    position: relative;
+    z-index: 1;
+}
+
+.lineTop {
+    margin: 50px auto -250px;
+    position: relative;
+    z-index: 1;
+}
+
+.verticalLine {
+    width: 2px;
+    height: 250px;
+    background-color: #000;
+    margin: auto;
+}
+
+.point {
+    width: 10px;
+    height: 10px;
+    border: solid 2px #090E2B;
+    border-radius: 50%;
+    background-color: #090E2B;
+    margin: 0 auto 0;
+}
+
+.baneerContent {
+    width: 50%;
+    margin: auto;
+    padding-top: 3em;
+}
+
+.baneerContent img {
+    width: 370px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.baneerContent h1 {
+    font-size: 4em;
+    font-family: 'Comfortaa';
+    text-align: center;
+    margin: 0 0 0 0;
+    font-weight: 100;
+    letter-spacing: 12px;
+}
+
+.baneerContent1 h1 {
+    font-size: 4em;
+    font-family: 'Comfortaa';
+    text-align: center;
+    padding: 2EM 0 15px 0;
+    font-weight: 100;
+    letter-spacing: 2px;
+    margin-top: 0;
+    color: white;
+}
+
+.baneerContent h1 span {
+    font-weight: bold;
+    letter-spacing: 4.5px;
+}
+
+.baneerContent1 h1 span {
+    font-weight: bold;
+}
+
+.baneerContent p {
+    text-align: right;
+    font-family: 'Gill_Sans_Nova';
+    font-weight: 100;
+    margin-top: 0;
+    padding-right: 120px;
+}
+
+.baneerContent p span {
+    font-weight: 300;
+    font-family: 'afa';
+}
+
+
+/* //////////main section 1 */
+
+.section1 {
+    width: 70%;
+    margin: auto;
+    overflow: auto;
+    height: auto;
+}
+
+.section1 .resumeImg {
+    float: left;
+}
+
+.section1 .resumeContent {
+    float: right;
+    width: 65%;
+}
+
+.section1 .resumeImg img {
+    width: 270px;
+    height: auto;
+}
+
+.section1 .resumeContent h2 {
+    font-family: 'Ebrima';
+    font-weight: 200;
+    font-size: 2em;
+    margin: 0 0 0 0;
+}
+
+.section1 .resumeContent h3 {
+    font-family: 'Gill_Sans_Nova';
+    font-weight: 200;
+    margin: 0 0 0 0;
+    font-size: 1.5em;
+}
+
+.section1 .resumeContent hr {
+    width: 16%;
+    margin-left: 0;
+    height: 4px;
+    background-color: #0d325f;
+}
+
+hr {
+    background-color: #0d325f;
+}
+
+.section1 .resumeContent p {
+    margin-top: 2em 0 1em 0;
+    font-family: 'Gill_Sans_Nova';
+    font-size: 20px;
+}
+
+
+/* //////////boutons */
+
+.btn {
+    border: solid 4px #278bca;
+    width: 40%;
+    padding: 15PX 50px 15px 50px;
+    text-decoration: none;
+    color: #278bca;
+    text-align: center;
+    font-family: 'Gill_Sans_Nova';
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.25s;
+    display: block;
+}
+
+.btn:hover {
+    background-color: #278bca;
+    color: white;
+}
+
+.btn i {
+    font-size: 20px;
+}
+
+
+/* //////////main section 2 */
+
+.backGrid {
+    background-image: linear-gradient( #e8e8e8, #e8e8e8, white);
+    height: 60em;
+}
+
+.section8 .backGrid {
+    background-image: linear-gradient( #e8e8e8, #e8e8e8, white);
+    height: 80em;
+}
+
+.backGrid .entitled {
+    width: 75%;
+    margin: auto;
+}
+
+.backGrid .entitled h2 {
+    text-align: center;
+    font-family: 'Ebrima';
+    font-weight: 200;
+    font-size: 2em;
+    padding-top: 4em;
+    margin: 0 0 8px 0;
+}
+
+.triangleTop {
+    width: 0;
+    height: 0;
+    border-left: 750px solid transparent;
+    border-right: 750px solid transparent;
+    border-bottom: 80px solid #e8e8e8;
+    margin-top: 10em;
+    z-index: 10;
+}
+
+.section8 .triangleTop {
+    width: 0;
+    height: 0;
+    border-left: 750px solid transparent;
+    border-right: 750px solid transparent;
+    border-bottom: 80px solid #e8e8e8;
+    margin-top: 5em;
+}
+
+.backGrid .entitled hr {
+    width: 10%;
+    margin: auto;
+    height: 4px;
+    background-color: #0d325f;
+    margin-bottom: 2em;
+}
+
+.backGrid .entitled p {
+    font-family: 'Gill_Sans_Nova';
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 5em;
+}
+
+.formation-card {
+    position: relative;
+    width: 80%;
+    margin: auto;
+    margin-top: 3em;
+}
+
+.formation-card2 {
+    margin-top: 40em;
+}
+
+aside {
+    position: absolute;
+    width: 25%;
+}
+
+aside .rectangle {
+    border: solid 3px #278bca;
+    background-color: #278bca;
+    width: 170px;
+    height: 270px;
+}
+
+aside .legend p {
+    position: absolute;
+    font-family: 'Comfortaa';
+    letter-spacing: 1px;
+    left: 10px;
+    text-align: center;
+    color: #278bca;
+}
+
+aside .legend p span {
+    font-weight: bold;
+}
+
+.vertical {
+    border-left: 3px solid #278bca;
+    height: 35px;
+    position: absolute;
+    left: 27%;
+    margin-left: -3px;
+    top: 325px;
+}
+
+aside .btn {
+    top: 30em;
+    position: absolute;
+    width: 70%;
+    padding: 10PX 5px 10px 5px;
+    color: #278bca;
+    font-size: 12px;
+    font-weight: bold;
+    transition: 0.25s;
+    display: block;
+}
+
+aside .btn i {
+    font-size: 15px;
+}
+
+.formation-card .description {
+    position: absolute;
+    width: 75%;
+    left: 200px;
+}
+
+.description p {
+    text-align: justify;
+    font-family: 'Gill_Sans_Nova';
+    font-size: 20px;
+}
+
+.description .number {
+    float: left;
+}
+
+.description h2 {
+    font-family: 'Comfortaa';
+    font-size: 40px;
+    margin: 0 0 5px 0;
+    color: #278bca;
+}
+
+.description h3 {
+    font-family: 'Comfortaa';
+    font-size: 30px;
+    margin-top: 0;
+    color: #278bca;
+}
+
+.section4-1 {
+    width: 60%;
+    font-size: 15px;
+    margin: auto;
+}
+
+.section4-1>.btn-1 {
+    border: solid 4px #278bca;
+    width: 40%;
+    padding: 15PX 50px 15px 50px;
+    text-decoration: none;
+    color: #278bca;
+    text-align: center;
+    font-family: 'Gill_Sans_Nova';
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.25s;
+    display: inline-block;
+}
+
+.btn-1:hover {
+    background-color: #278bca;
+    color: white;
+}
+
+
+/* //////////cards */
+
+.cardGrid {
+    position: relative;
+}
+
+.card {
+    width: 33.33%;
+    margin-top: 5em;
+    float: left;
+    padding: 0 30px 0 30px;
+}
+
+.card .btn {
+    width: 70%;
+}
+
+.cardTitle {
+    width: 75%;
+    float: left;
+    position: absolute;
+    background-color: black;
+    padding: 20px;
+    left: 15px;
+    top: -15px;
+    opacity: 0.8;
+}
+
+.cardTitle h3 {
+    font-family: 'Gill_Sans_Nova';
+    font-weight: 100;
+    margin: 0 0 0 0;
+    font-size: 1.5em;
+    padding: 15px;
+    color: white;
+}
+
+.cardTitle h3 span {
+    font-weight: bold;
+}
+
+.number {
+    float: right;
+    font-family: 'Gill_Sans_Nova';
+    font-size: 2.5em;
+    padding-right: 15px;
+}
+
+.number p {
+    margin: 10px 0 10px 0;
+    font-weight: bold;
+}
+
+.content {
+    padding-top: 18em;
+}
+
+.content p {
+    padding: 20px;
+}
+
+.content img {
+    position: absolute;
+    left: 150px;
+    bottom: 250px;
+}
+
+
+/* blue */
+
+.cardBlue {
+    font-family: 'Gill_Sans_Nova';
+    color: White;
+    position: absolute;
+}
+
+.cardBlue .cardTitle {
+    background-color: #1d3c6a;
+    opacity: 80%;
+}
+
+.cardBlue .content1 {
+    background-color: #2f60aa;
+}
+
+.btnBlue {
+    width: 60%;
+    border: solid 4px #1d3c6a;
+    color: #1d3c6a;
+}
+
+.btnBlue:hover {
+    background-color: #1d3c6a;
+    color: white;
+}
+
+
+/* yellow */
+
+.cardYellow {
+    font-family: 'Gill_Sans_Nova';
+    color: White;
+    position: absolute;
+    right: 500px;
+}
+
+.cardYellow .cardTitle {
+    background-color: #ad8a12;
+    opacity: 80%;
+}
+
+.cardYellow .content2 {
+    background-color: #e6bc2a;
+}
+
+.btnYellow {
+    width: 60%;
+    border: solid 4px #ad8a12;
+    color: #ad8a12;
+}
+
+.btnYellow:hover {
+    background-color: #ad8a12;
+    color: white;
+}
+
+
+/* brown */
+
+.cardBrown {
+    font-family: 'Gill_Sans_Nova';
+    color: White;
+    position: absolute;
+    right: 0;
+}
+
+.cardBrown .cardTitle {
+    background-color: #953e18;
+    opacity: 80%;
+}
+
+.cardBrown .content3 {
+    background-color: #e06631;
+}
+
+.btnBrown {
+    width: 60%;
+    border: solid 4px #953e18;
+    color: #953e18;
+}
+
+.btnBrown:hover {
+    background-color: #953e18;
+    color: white;
+}
+
+.cardGrid img {
+    margin: auto;
+}
+
+
+/* //////////main section 3 */
+
+.section3 {
+    height: 700px;
+    margin-top: 15em;
+}
+
+.section3 .backContent {
+    background-color: #e8e8e8;
+    background-image: url("Maquette/ressources/img_bg_homepage.png");
+    height: 800px;
+    position: relative;
+    width: 100%;
+    background-size: cover;
+}
+
+.section3 .backContent::after {
+    content: "";
+    position: absolute;
+    background-image: url("Maquette/ressources/cache_bg.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    bottom: 0;
+}
+
+.section3Content {
+    width: 70%;
+    padding-top: 12em;
+    margin: auto;
+    overflow: auto;
+}
+
+.section3Content img {
+    width: 33.33%;
+    float: left;
+    width: 250px;
+    height: auto;
+    margin-left: 30px;
+}
+
+.section3Content .resume {
+    width: 66.66%;
+    float: right;
+}
+
+.resume h3 {
+    font-family: 'Gill_Sans_Nova';
+    font-weight: 200;
+    margin: 0 0 0 0;
+    font-size: 1.5em;
+}
+
+.resume h2 {
+    font-family: 'Ebrima';
+    font-weight: 200;
+    font-size: 2em;
+    margin: 0 0 0 0;
+    letter-spacing: 3px;
+}
+
+.resume hr {
+    width: 10%;
+    height: 4px;
+    background-color: #0d325f;
+    margin-bottom: 2em;
+    margin-left: 0;
+}
+
+.resume p {
+    font-family: 'Gill_Sans_Nova';
+}
+
+.logoPartners {
+    width: 80%;
+    padding-top: 80px;
+    position: relative;
+}
+
+.logoPartners a {
+    position: absolute;
+}
+
+.logoPartners a img {
+    position: absolute;
+    height: 150px;
+    width: auto;
+}
+
+.logoPartners a .logo1 {
+    left: 150px;
+}
+
+.logoPartners a .logo2 {
+    left: 475px;
+}
+
+.logoPartners a .logo3 {
+    left: 775px;
+}
+
+.logoPartners a .logo4 {
+    left: 1100px;
+}
+
+
+/* //////////main section4 */
+
+.section4 {
+    text-align: center;
+    margin-top: 3em;
+}
+
+.section4 h2 {
+    font-family: 'Ebrima';
+    font-weight: 200;
+    font-size: 2em;
+    margin: 0 0 0 0;
+    letter-spacing: 3px;
+}
+
+.section4 hr {
+    width: 10%;
+    height: 4px;
+    background-color: #0d325f;
+    margin-bottom: 2em;
+}
+
+.section4 .btn {
+    margin: auto;
+    width: 20%;
+}
+
+
+/* //////////footer */
+
+footer {
+    font-family: 'Gill_Sans_Nova';
+    margin-top: 8em;
+    height: 500px;
+    position: relative;
+    background-color: #e8e8e8;
+}
+
+.section5 {
+    background-color: #e8e8e8;
+}
+
+.bottomGrid {
+    width: 90%;
+}
+
+.address {
+    width: 33.33%;
+    position: absolute;
+    left: 0px;
+    padding: 50px;
+}
+
+.address img {
+    position: absolute;
+    width: 200px;
+    height: auto;
+    left: 20px;
+}
+
+.addressContent {
+    padding-top: 200px;
+}
+
+.addressContent h4 {
+    margin-bottom: 0;
+}
+
+.addressContent p {
+    margin-top: 0px;
+    color: rgb(70, 70, 70);
+    line-height: 18px;
+}
+
+.formations {
+    width: 33.33%;
+    position: absolute;
+    left: 500px;
+    padding: 50px;
+}
+
+.formations h4 {
+    margin-bottom: 20px;
+}
+
+.formations .btn {
+    width: 70%;
+    margin-bottom: 1em;
+    padding: 15px 15px 15px 15px;
+}
+
+.formations .btn:hover {
+    background-color: #278bca;
+    color: white;
+}
+
+.formations .btn2 {
+    border: solid 4px #A88417;
+    color: #A88417;
+}
+
+.formations .btn2:hover {
+    background-color: #A88417;
+    color: white;
+}
+
+.formations .btn3 {
+    border: solid 4px #802C0E;
+    color: #802C0E;
+}
+
+.formations .btn3:hover {
+    background-color: #802C0E;
+    color: white;
+}
+
+.contact {
+    width: 33.33%;
+    position: absolute;
+    left: 1000px;
+    padding: 50px;
+}
+
+.contact .btn {
+    width: 55%;
+    margin-bottom: 1em;
+    padding: 15px 15px 15px 15px;
+}
+
+.contact .phone i {
+    font-size: 1.5em;
+}
+
+.contact .phone p {
+    font-size: 20px;
+    font-weight: 100;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+.contact .mail i {
+    font-size: 1.5em;
+}
+
+.contact .mail a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.contact hr {
+    height: 2px;
+    width: 90%;
+    margin-left: 0;
+}
+
+.section6 {
+    padding-top: 450px;
+}
+
+.mentions {
+    background-color: white;
+    text-align: center;
+    padding: 2em 0 2em 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+}
+
+.mentions p a {
+    color: rgb(70, 70, 70);
+    text-decoration: none;
+}
+
+.section7 {
+    text-align: center;
+}
+
+.section7 .resumeContent h2 {
+    text-align: center;
+    font-family: 'Ebrima';
+    font-weight: 200;
+    font-size: 2em;
+    padding-top: 0em;
+    margin: 0 0 8px 0;
+    width: 60%;
+    margin: auto;
+}
+
+.section7 .resumeContent p {
+    font-family: 'Gill_Sans_Nova';
+    width: 60%;
+    margin: auto;
+    margin-bottom: 4em;
+}
+
+.section7 .resumeContent .galery {
+    position: relative;
+}
+
+.galery {
+    margin-top: 6em;
+    width: 90%;
+    margin: auto;
+}
+
+.galery div {
+    border: solid 3px blue;
+    background-color: blue;
+    width: 24%;
+    height: 20em;
+    margin: 0.5%;
+}
+
+.galery .cube1 {
+    float: left;
+}
+
+.galery .cube2 {
+    float: left;
+}
+
+.galery .cube3 {
+    float: left;
+}
+
+.galery .cube4 {
+    float: left;
+}
+
+
+/* CONTACT.HTML */
+
+.contactBaneer {
+    padding-top: 5em;
+    background-color: #e8e8e8;
+    position: relative;
+    padding-bottom: 12em;
+}
+
+.baneerContent h1 {
+    font-size: 4em;
+    font-family: 'Comfortaa';
+    text-align: center;
+    margin: 0 0 0 0;
+    font-weight: 100;
+    letter-spacing: 12px;
+}
+
+.contactSection1 {
+    width: 70%;
+    margin: auto;
+}
+
+.contactSection1 .resumeContent h2 {
+    font-family: 'Ebrima';
+    font-weight: 200;
+    font-size: 2em;
+    margin: 0 0 0 0;
+    text-align: center;
+}
+
+.contactSection1 .resumeContent p {
+    margin-top: 2em 0 1em 0;
+    font-family: 'Gill_Sans_Nova';
+    font-size: 20px;
+    text-align: center;
+}
+
+.contactSection1 .resumeContent .tel {
+    font-family: 'Ebrima';
+    font-weight: 200;
+    font-size: 1.5em;
+    margin: 3em 0 0 0;
+    text-align: center;
+    color: rgb(18, 32, 107);
+    margin-bottom: 3em;
+}
+
+.contactForm {
+    width: 80%;
+    margin: auto;
+    padding: 120px;
+    margin-bottom: 10em;
+    box-shadow: 0 4px 8px 5px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+input {
+    border: none;
+    font-size: 25px;
+    color: rgb(139, 139, 139);
+}
+
+.input1 {
+    width: 93%;
+}
+
+.input2 {
+    width: 90%;
+}
+
+.input3 {
+    width: 77%;
+}
+
+.input4 {
+    width: 87%;
+}
+
+.input5 {
+    width: 94%;
+}
+
+.input6 {
+    width: 93%;
+}
+
+.form {
+    margin-bottom: 5em;
+    border-bottom: 5px solid black;
+    padding-bottom: 15px;
+}
+
+label {
+    font-family: 'Gill_Sans_Nova';
+    font-size: 25px;
+}
+
+.message textarea {
+    border-left: 5px solid black;
+    border-right: 5px solid black;
+    border-bottom: 5px solid black;
+    border-top: none;
+    margin-top: 2em;
+    margin-bottom: 5em;
+}
+
+#message {
+    width: 100%;
+}
+
+button {
+    margin-top: 4em;
+    margin: auto;
+}
+
+.contactForm .btn {
+    width: 30%;
+    padding: 20px;
+}
+
+#googleMap {
+    width: 100%;
+}
+
+hr {
+    background-color: #0d325f;
+}
+
+
+/* ///////////MEDIA QUERIES//////////////////////////////////// */
+
+@media screen and (max-width: 2000px) {
+    aside .btn {
+        width: 60%;
+    }
+    .vertical {
+        left: 30%;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .container {
+        width: 1200px;
+    }
+    .input1 {
+        width: 91%;
+    }
+    .input2 {
+        width: 88%;
+    }
+    .input3 {
+        width: 70%;
+    }
+    .input4 {
+        width: 84%;
+    }
+    .input5 {
+        width: 92%;
+    }
+    .input6 {
+        width: 90%;
+    }
+    .triangle-Bottom {
+        border-left: 600px solid transparent;
+        border-right: 600px solid transparent;
+    }
+    .triangleBottom {
+        border-left: 600px solid transparent;
+        border-right: 600px solid transparent;
+    }
+    .btn {
+        width: 50%;
+    }
+    .triangleTop {
+        border-left: 600px solid transparent;
+        border-right: 600px solid transparent;
+    }
+    .section8 .triangleTop {
+        border-left: 600px solid transparent;
+        border-right: 600px solid transparent;
+    }
+    .cardYellow {
+        right: 400px;
+    }
+    .content img {
+        left: 100px;
+        bottom: 300px;
+    }
+    .cardTitle {
+        width: 70%;
+        float: left;
+        height: 150px;
+        position: absolute;
+        background-color: black;
+        padding: 20px;
+        left: 15px;
+        top: -15px;
+        opacity: 0.8;
+    }
+    .card .btn {
+        width: 80%;
+    }
+    .logoPartners a img {
+        position: absolute;
+        height: 120px;
+        width: auto;
+    }
+    .logoPartners a .logo1 {
+        left: 100px;
+    }
+    .logoPartners a .logo2 {
+        left: 380px;
+    }
+    .logoPartners a .logo3 {
+        left: 630px;
+    }
+    .logoPartners a .logo4 {
+        left: 910px;
+    }
+    .section4 .btn {
+        margin: auto;
+        width: 20%;
+    }
+    .section4 .btn {
+        margin: auto;
+        width: 30%;
+    }
+    .formations {
+        left: 400px;
+        padding: 50px;
+    }
+    .formations .btn {
+        width: 90%;
+        margin-bottom: 1em;
+        padding: 15px 15px 15px 15px;
+    }
+    .contact {
+        width: 33.33%;
+        position: absolute;
+        left: 800px;
+        padding: 50px;
+    }
+    .contact .btn {
+        width: 70%;
+        margin-bottom: 1em;
+        padding: 15px 15px 15px 15px;
+    }
+    /* .galery div {
+        border: solid 3px blue;
+        background-color: blue;
+        position: absolute;
+        width: 250px;
+        height: 250px;
+    }
+    .galery .cube1 {
+        left: 50px
+    }
+    .galery .cube2 {
+        left: 332px;
+    }
+    .galery .cube3 {
+        right: 332px;
+    }
+    .galery .cube4 {
+        right: 50px;
+    } */
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        width: 950px;
+    }
+    .input1 {
+        width: 87%;
+    }
+    .input2 {
+        width: 83%;
+    }
+    .input3 {
+        width: 58%;
+    }
+    .input4 {
+        width: 76%;
+    }
+    .input5 {
+        width: 89%;
+    }
+    .input6 {
+        width: 87%;
+    }
+    .contactForm .btn {
+        width: 40%;
+        padding: 20px;
+    }
+    .triangle-Bottom {
+        border-left: 475px solid transparent;
+        border-right: 475px solid transparent;
+    }
+    .triangleBottom {
+        border-left: 475px solid transparent;
+        border-right: 475px solid transparent;
+    }
+    .btn {
+        width: 50%;
+    }
+    .triangleTop {
+        border-left: 475px solid transparent;
+        border-right: 475px solid transparent;
+    }
+    .section8 .triangleTop {
+        border-left: 475px solid transparent;
+        border-right: 475px solid transparent;
+        margin-top: 5em;
+    }
+    .section1 .resumeImg img {
+        width: 200px;
+        height: auto;
+    }
+    .backGrid {
+        height: 55em;
+    }
+    .backGrid .entitled h2 {
+        text-align: center;
+        font-family: 'Ebrima';
+        font-weight: 200;
+        font-size: 2em;
+        padding-top: 2em;
+        margin: 0 0 8px 0;
+    }
+    /* .galery div {
+        border: solid 3px blue;
+        background-color: blue;
+        position: absolute;
+        width: 200px;
+        height: 200px;
+    }
+    .galery .cube1 {
+        left: 50px
+    }
+    .galery .cube2 {
+        left: 282px;
+    }
+    .galery .cube3 {
+        right: 282px;
+    }
+    .galery .cube4 {
+        right: 50px;
+    } */
+    /* //////////boutons */
+    .btn {
+        border: solid 4px #278bca;
+        width: 70%;
+        padding: 15PX 50px 15px 50px;
+        text-decoration: none;
+        color: #278bca;
+        text-align: center;
+        font-family: 'Gill_Sans_Nova';
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: 0.25s;
+        display: block;
+    }
+    .btnBlue:hover {
+        background-color: #278bca;
+        color: white;
+    }
+    .btnYellow:hover {}
+    .btn i {
+        font-size: 20px;
+    }
+    aside .btn {
+        width: 90%;
+    }
+    /* //////////vertical lines */
+    /*  */
+    .section3Content img {
+        width: 200px;
+        margin-left: 0;
+    }
+    /*///////// card */
+    .cardGrid {
+        position: relative;
+    }
+    .card {
+        width: 33.33%;
+        margin-top: 5em;
+        float: left;
+        padding: 0 30px 0 30px;
+    }
+    .card .btn {
+        width: 100%;
+        padding: 10px
+    }
+    .cardTitle {
+        width: 65%;
+        float: left;
+        position: absolute;
+        background-color: black;
+        padding: 10px;
+        left: 15px;
+        top: -15px;
+        opacity: 0.8;
+        font-size: 12px;
+        height: 120px;
+    }
+    .cardTitle h3 {
+        font-family: 'Gill_Sans_Nova';
+        font-weight: 100;
+        margin: 0 0 0 0;
+        font-size: 1.5em;
+        padding: 15px;
+        color: white;
+    }
+    .cardTitle h3 span {
+        font-weight: bold;
+    }
+    .number {
+        float: right;
+        font-family: 'Gill_Sans_Nova';
+        font-size: 1.5em;
+        padding-right: 15px;
+    }
+    .number p {
+        margin: 10px 0 10px 0;
+        font-weight: bold;
+    }
+    .content {
+        padding-top: 15em;
+    }
+    .content p {
+        padding: 0px 20px 20px 20px;
+        font-size: 13px;
+    }
+    .content img {
+        left: 80px;
+        bottom: 260px;
+        width: 150px;
+    }
+    .cardYellow {
+        right: 320px;
+    }
+    .section3Content {
+        padding-top: 8em;
+    }
+    /*////////// logos patenaires */
+    .logoPartners {
+        width: 80%;
+        padding-top: 50px;
+        margin: auto;
+    }
+    .logoPartners a {
+        position: absolute;
+    }
+    .logoPartners a img {
+        position: absolute;
+        height: 100px;
+        width: auto;
+    }
+    .logoPartners a .logo1 {
+        left: 20px;
+    }
+    .logoPartners a .logo2 {
+        left: 220px;
+    }
+    .logoPartners a .logo3 {
+        left: 400px;
+    }
+    .logoPartners a .logo4 {
+        left: 600px;
+    }
+    /*  */
+    .section3 .backContent {
+        background-color: #e8e8e8;
+        height: 700px;
+    }
+    .section3 {
+        height: 600px;
+        margin-top: 15em;
+    }
+    .section4 {
+        text-align: center;
+        margin-top: 3em;
+    }
+    .section4 .btn {
+        margin: auto;
+        width: 35%;
+    }
+    .section8 .triangleTop {
+        margin-top: 5em;
+    }
+    .contact {
+        width: 33.33%;
+        position: absolute;
+        left: 650px;
+        padding: 25px;
+    }
+    .contact .btn {
+        width: 60%;
+    }
+    .formations {
+        width: 33.33%;
+        position: absolute;
+        left: 300px;
+        padding: 25px;
+    }
+    .formations .btn {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+    .addressContent {
+        padding-top: 200px;
+    }
+    .address img {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        left: 50px;
+    }
+    .mentions {
+        background-color: white;
+        text-align: center;
+        font-size: 20px;
+        letter-spacing: 1px;
+    }
+    .description p {
+        text-align: justify;
+        font-family: 'Gill_Sans_Nova';
+        font-size: 15px;
+    }
+    .vertical {
+        left: 47%;
+        margin-left: -3px;
+        top: 325px;
+    }
+    /* .galery div {
+        width: 170px;
+        height: 170px;
+    }
+    .galery .cube1 {
+        left: 10px;
+    }
+    .galery .cube2 {
+        left: 207px
+    }
+    .galery .cube3 {
+        right: 207px;
+    }
+    .galery .cube4 {
+        right: 10px;
+    } */
+    aside .btn {
+        top: 30em;
+        transition: 0.25s;
+        display: block;
+    }
+    .section4-1 {
+        font-size: 10px;
+        margin-top: 15em;
+    }
+    .section4-1>.btn-1 {
+        border: solid 4px #278bca;
+        width: 55%;
+    }
+    .galery div {
+        border: solid 3px blue;
+        background-color: blue;
+        width: 45%;
+        height: 20em;
+        margin: 2.5%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container {
+        width: 760px;
+    }
+    .input1 {
+        width: 82%;
+    }
+    .input2 {
+        width: 75%;
+    }
+    .input3 {
+        width: 40%;
+    }
+    .input4 {
+        width: 68%;
+    }
+    .input5 {
+        width: 85%;
+    }
+    .input6 {
+        width: 82%;
+    }
+    .contactForm .btn {
+        width: 50%;
+        padding: 20px;
+    }
+    .modal-content {
+        width: 80%;
+    }
+    .baneerContent {
+        margin: auto;
+        padding-top: 3em;
+        width: 100%;
+    }
+    .baneerContent p {
+        text-align: center;
+        padding-left: 20em;
+    }
+    .baneerContent1 h1 {
+        font-size: 2.5em;
+    }
+    .triangle-Bottom {
+        border-left: 375px solid transparent;
+        border-right: 375px solid transparent;
+        margin-bottom: 9em;
+    }
+    .triangleBottom {
+        border-left: 375px solid transparent;
+        border-right: 375px solid transparent;
+    }
+    .btn {
+        width: 50%;
+    }
+    .triangleTop {
+        border-left: 375px solid transparent;
+        border-right: 375px solid transparent;
+    }
+    .section8 .triangleTop {
+        border-left: 375px solid transparent;
+        border-right: 375px solid transparent;
+        margin-top: 5em;
+    }
+    .vertical {
+        margin-left: -3px;
+        top: 328px;
+        left: 80px;
+    }
+    .section8 .triangleTop {
+        margin-top: 5em;
+    }
+    aside .legend span {
+        font-size: 15px;
+    }
+    aside .legend p {
+        letter-spacing: 0;
+    }
+    aside .btn {
+        top: 30em;
+        left: 5px;
+        width: 110%;
+        font-size: 12px;
+        font-weight: bold;
+        transition: 0.25s;
+        display: block;
+    }
+    .section4-1>.btn-1 {
+        border: solid 4px #278bca;
+        width: 45%;
+        padding: 10px 20px 10px 20px;
+    }
+    .section1 .resumeContent hr {
+        width: 16%;
+        margin: auto;
+        height: 4px;
+        background-color: #0d325f;
+        margin-top: 10px;
+    }
+    .section1 .resumeImg img {
+        display: none;
+    }
+    .section1 .resumeContent .btn {
+        margin: auto;
+        width: 60%;
+    }
+    .section1 .resumeContent {
+        float: left;
+        width: 100%;
+        text-align: center;
+    }
+    .section4-1 {
+        width: 75%;
+    }
+    .section4-1 h2 {
+        font-size: 17px;
+    }
+    .backGrid {
+        height: 55em;
+    }
+    .backGrid .entitled h2 {
+        text-align: center;
+        font-family: 'Ebrima';
+        font-weight: 200;
+        font-size: 2em;
+        padding-top: 2em;
+        margin: 0 0 8px 0;
+    }
+    /* //////////boutons */
+    .btn {
+        border: solid 4px #278bca;
+        width: 70%;
+        padding: 15PX 50px 15px 50px;
+        text-decoration: none;
+        color: #278bca;
+        text-align: center;
+        font-family: 'Gill_Sans_Nova';
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: 0.25s;
+        display: block;
+    }
+    .btn:hover {
+        background-color: #278bca;
+        color: white;
+    }
+    .btn i {
+        font-size: 20px;
+    }
+    /* //////////vertical lines */
+    /*  */
+    .section3Content img {
+        display: none;
+    }
+    .lineBottom {
+        margin: -300px auto 0px;
+    }
+    .verticalLine {
+        width: 2px;
+        height: 250px;
+        background-color: #000;
+        margin: 0 auto 0;
+    }
+    .verticalLine2 {
+        width: 2px;
+        height: 200px;
+        background-color: #000;
+        margin: 0 auto 0;
+    }
+    .contactBaneer {
+        padding-top: 5em;
+        background-color: #e8e8e8;
+        position: relative;
+        padding-bottom: 8em;
+    }
+    /*///////// card */
+    .cardGrid {
+        position: relative;
+    }
+    .card {
+        width: 50%;
+        margin-top: 5em;
+        float: left;
+        padding: 0 30px 0 30px;
+    }
+    .card .btn {
+        width: 100%;
+        padding: 10px
+    }
+    .cardTitle {
+        width: 65%;
+        float: left;
+        position: absolute;
+        background-color: black;
+        padding: 10px;
+        left: 15px;
+        top: -15px;
+        opacity: 0.8;
+        font-size: 12px;
+        height: 120px;
+    }
+    .cardTitle h3 {
+        font-family: 'Gill_Sans_Nova';
+        font-weight: 100;
+        margin: 0 0 0 0;
+        font-size: 1.5em;
+        padding: 15px;
+    }
+    .cardTitle h3 span {
+        font-weight: bold;
+    }
+    .number {
+        float: right;
+        font-family: 'Gill_Sans_Nova';
+        font-size: 1.5em;
+        padding-right: 15px;
+    }
+    .number p {
+        margin: 10px 0 10px 0;
+        font-weight: bold;
+    }
+    .cardBrown {
+        right: 200px;
+        top: 500px;
+    }
+    .cardYellow {
+        left: 375px;
+    }
+    .backGrid {
+        height: 80em;
+    }
+    .content {
+        padding-top: 15em;
+    }
+    .content p {
+        padding: 0px 20px 20px 20px;
+        font-size: 13px;
+    }
+    .content img {
+        left: 80px;
+        bottom: 260px;
+        width: 150px;
+    }
+    .cardYellow {
+        right: 320px;
+    }
+    .section3Content {
+        padding-top: 8em;
+        width: 100%;
+    }
+    .section3Content .resume {
+        width: 100%;
+        text-align: center;
+        padding: 0 50px 0 50px;
+    }
+    .resume hr {
+        margin: auto;
+        margin-top: 20px;
+        background-color: #0d325f;
+    }
+    /*////////// logos patenaires */
+    .logoPartners {
+        width: 80%;
+        padding-top: 50px;
+        margin: auto;
+    }
+    .logoPartners a {
+        position: absolute;
+    }
+    .logoPartners a img {
+        position: absolute;
+        height: 100px;
+        width: auto;
+    }
+    .logoPartners a .logo1 {
+        left: 0;
+        height: 75px;
+    }
+    .logoPartners a .logo2 {
+        left: 175px;
+        height: 75px;
+    }
+    .logoPartners a .logo3 {
+        left: 350px;
+        height: 75px;
+    }
+    .logoPartners a .logo4 {
+        left: 520px;
+        height: 75px;
+    }
+    /*  */
+    .section3 .backContent {
+        background-color: #e8e8e8;
+        height: 550px;
+    }
+    .section3 {
+        height: 500px;
+        margin-top: 15em;
+    }
+    .lineBottom2 {
+        margin: -1em auto 0;
+        position: relative;
+        z-index: 1;
+    }
+    .section4 .btn {
+        margin: auto;
+        width: 40%;
+    }
+    .contact {
+        width: 50%;
+        position: absolute;
+        left: 380px;
+        padding: 50px;
+    }
+    .contact .btn {
+        width: 90%;
+    }
+    .formations {
+        display: none;
+    }
+    .address {
+        width: 50%;
+    }
+    .address img {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        left: 50px;
+    }
+    .mentions {
+        background-color: white;
+        text-align: center;
+        font-size: 15px;
+        letter-spacing: 1px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 500px;
+    }
+    input {
+        border: none;
+        font-size: 25px;
+        color: rgb(139, 139, 139);
+        background-color: #A88417;
+    }
+    .input1,
+    .input2,
+    .input3,
+    .input4,
+    .input5,
+    .input6 {
+        width: 100%;
+    }
+    .lineBottomC {
+        margin: -300px auto 50px;
+    }
+    .lineBottomC .verticalLine {}
+    label {
+        font-size: 20px;
+        margin-bottom: 5px;
+    }
+    .contactSection1 .resumeContent h2 {
+        font-size: 1.5em;
+    }
+    .contactForm {
+        padding: 40px 30px 40px 30px;
+    }
+    .form {
+        margin-bottom: 2em;
+    }
+    .contactForm .btn {
+        width: 100%;
+        padding: 20px;
+    }
+    .baneerContent {
+        margin: auto;
+        padding-top: 3em;
+        width: 100%;
+    }
+    .baneerContent p {
+        text-align: right;
+        padding-left: 9em;
+        padding-right: 50px;
+    }
+    .triangle-Bottom {
+        border-left: 250px solid transparent;
+        border-right: 250px solid transparent;
+    }
+    .triangleBottom {
+        border-left: 250px solid transparent;
+        border-right: 250px solid transparent;
+    }
+    .btn {
+        width: 50%;
+    }
+    .triangleTop {
+        border-left: 250px solid transparent;
+        border-right: 250px solid transparent;
+    }
+    .section8 .triangleTop {
+        border-left: 250px solid transparent;
+        border-right: 250px solid transparent;
+        margin-top: 5em;
+    }
+    .section7 {
+        width: 100%;
+    }
+    .section7 .resumeContent h2 {
+        text-align: center;
+        font-family: 'Ebrima';
+        font-weight: 200;
+        font-size: 1.5em;
+        padding-top: 1em;
+        margin: 0 0 8px 0;
+        width: 80%;
+        margin: auto;
+        margin-bottom: 20px;
+    }
+    .galery div {
+        border: solid 3px blue;
+        background-color: blue;
+        width: 45%;
+        height: 20em;
+        margin: 2.5%;
+    }
+    /* .galery .cube1 {
+        left: 70px;
+    }
+    .galery .cube2 {
+        left: 305px
+    }
+    .galery .cube3 {
+        top: 1150px;
+        left: 70px;
+    }
+    .galery .cube4 {
+        top: 1150px;
+        left: 305px
+    } */
+    .section1 .resumeContent hr {
+        width: 16%;
+        margin: auto;
+        height: 4px;
+        background-color: #0d325f;
+        margin-top: 10px;
+    }
+    .section1 .resumeImg img {
+        display: none;
+    }
+    .section1 .resumeContent .btn {
+        margin: auto;
+        width: 80%;
+    }
+    .section1 .resumeContent {
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 2em;
+    }
+    .backGrid {
+        height: 55em;
+    }
+    .backGrid .entitled h2 {
+        text-align: center;
+        font-family: 'Ebrima';
+        font-weight: 200;
+        font-size: 2em;
+        padding-top: 2em;
+        margin: 0 0 8px 0;
+    }
+    /* //////////boutons */
+    .btn {
+        border: solid 4px #278bca;
+        width: 70%;
+        padding: 15PX 50px 15px 50px;
+        text-decoration: none;
+        color: #278bca;
+        text-align: center;
+        font-family: 'Gill_Sans_Nova';
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: 0.25s;
+        display: block;
+    }
+    .btn:hover {
+        background-color: #278bca;
+        color: white;
+    }
+    .btn i {
+        font-size: 20px;
+    }
+    /* //////////vertical lines */
+    /*  */
+    .section3Content img {
+        display: none;
+    }
+    /*///////// card */
+    .cardGrid {
+        position: relative;
+    }
+    .card {
+        width: 90%;
+        margin-top: 3em;
+        float: left;
+        padding: 0 30px 0 30px;
+    }
+    .card .btn {
+        width: 100%;
+        padding: 10px
+    }
+    .cardTitle {
+        width: 75%;
+        float: left;
+        position: absolute;
+        background-color: black;
+        padding: 10px;
+        left: 15px;
+        top: -15px;
+        opacity: 0.8;
+        font-size: 12px;
+        height: 120px;
+    }
+    .cardTitle h3 {
+        font-family: 'Gill_Sans_Nova';
+        font-weight: 100;
+        margin: 0 0 0 0;
+        font-size: 2em;
+        padding: 15px
+    }
+    .cardTitle h3 span {
+        font-weight: bold;
+    }
+    .number {
+        float: right;
+        font-family: 'Gill_Sans_Nova';
+        font-size: 2em;
+        padding-right: 15px;
+    }
+    .number p {
+        margin: 25px 0 10px 0;
+        font-weight: bold;
+    }
+    .cardBlue {
+        left: 25px;
+    }
+    .cardBrown {
+        right: 25px;
+        top: 1000px;
+    }
+    .cardYellow {
+        left: 25px;
+        top: 500px;
+    }
+    .btnBrown {
+        width: 60%;
+        border: solid 4px #802C0E;
+        color: #802C0E;
+    }
+    .btnBrown:hover {
+        background-color: #802C0E;
+        color: white;
+    }
+    .btnYellow {
+        width: 60%;
+        border: solid 4px #A88417;
+        color: #A88417;
+    }
+    .btnYellow:hover {
+        background-color: #A88417;
+        color: white;
+    }
+    .backGrid {
+        height: 110em;
+    }
+    .content {
+        padding-top: 15em;
+    }
+    .content p {
+        padding: 0px 20px 20px 20px;
+        font-size: 13px;
+    }
+    .content img {
+        left: 140px;
+        bottom: 200px;
+        width: 150px;
+    }
+    .cardYellow {
+        right: 320px;
+    }
+    .section3Content {
+        padding-top: 8em;
+        width: 100%;
+    }
+    .section3Content .resume {
+        width: 100%;
+        text-align: center;
+        padding: 0 50px 0 50px;
+    }
+    .resume hr {
+        margin: auto;
+        margin-top: 20px;
+        background-color: #0d325f;
+    }
+    /*////////// logos patenaires */
+    .section3Content {
+        padding-top: 5em;
+        width: 100%;
+    }
+    .logoPartners {
+        width: 80%;
+        padding-top: 20px;
+        margin: auto;
+    }
+    .logoPartners a {
+        position: absolute;
+    }
+    .logoPartners a img {
+        position: absolute;
+        height: 100px;
+        width: auto;
+    }
+    .logoPartners a .logo1 {
+        left: 50px;
+        height: 75px;
+    }
+    .logoPartners a .logo2 {
+        left: 230px;
+        height: 75px;
+    }
+    .logoPartners a .logo3 {
+        left: 50px;
+        top: 110px;
+        height: 75px;
+    }
+    .logoPartners a .logo4 {
+        left: 230px;
+        top: 110px;
+        height: 75px;
+    }
+    .section4 h2 {
+        font-family: 'Ebrima';
+        font-weight: 200;
+        font-size: 20px;
+        margin: 0 0 0 0;
+        letter-spacing: 1px;
+    }
+    aside .rectangle {
+        width: 130px;
+        height: 220px;
+    }
+    .description {
+        width: 60%;
+    }
+    .description h2 {
+        font-size: 30px;
+        margin: 0 0 5px 0;
+    }
+    .description h3 {
+        font-size: 20px;
+        margin-top: 0;
+    }
+    .description p {
+        font-size: 12px;
+        padding-right: 15px;
+    }
+    .formation-card .description {
+        position: absolute;
+        width: 75%;
+        left: 150px;
+    }
+    .legend {
+        width: 40%;
+    }
+    .vertical {
+        margin-left: -3px;
+        top: 315px;
+        left: 65px;
+    }
+    aside .btn {
+        top: 29em;
+        left: -5px;
+        width: 140px;
+        font-size: 12px;
+        font-weight: bold;
+        transition: 0.25s;
+        display: block;
+    }
+    .section8 .backGrid {
+        background-image: linear-gradient( #e8e8e8, #e8e8e8, white);
+        height: 82em;
+    }
+    .formation-card2 {
+        margin-top: 550px;
+    }
+    /*  */
+    footer {
+        font-family: 'Gill_Sans_Nova';
+        margin-top: 4em;
+        height: 400px;
+        position: relative;
+        background-color: #e8e8e8;
+    }
+    .section3 .backContent {
+        background-color: #e8e8e8;
+        height: 700px;
+    }
+    .section3 {
+        height: 600px;
+        margin-top: 15em;
+    }
+    .section4 {
+        text-align: center;
+        margin-top: 2em;
+    }
+    .section4-1 {
+        font-size: 10px;
+        margin-top: 5em;
+    }
+    .section4-1 h2 {
+        font-size: 15px;
+    }
+    .section4 .btn {
+        margin: auto;
+        width: 60%;
+    }
+    .section4-1>.btn-1 {
+        border: solid 4px #278bca;
+        width: 60%;
+        padding: 10px 20px 10px 20px;
+        font-size: 15px;
+    }
+    .contact {
+        width: 50%;
+        position: absolute;
+        left: 250px;
+        padding: 20px 10px 10px 10px;
+    }
+    .contact h4 {
+        text-align: center;
+    }
+    .contact .btn {
+        width: 100%;
+        padding: 10px
+    }
+    .contact .mail a {
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+    }
+    .contact hr {
+        height: 2px;
+        width: 100%;
+        margin: 20px 0 20px 0;
+    }
+    .phone {
+        text-align: center;
+    }
+    .mail {
+        text-align: center;
+    }
+    .formations {
+        display: none;
+    }
+    .section6 {
+        padding-top: 350px;
+    }
+    .address {
+        width: 50%;
+        padding: 20px 0 10px 10px;
+    }
+    .address img {
+        position: absolute;
+        width: 200px;
+        height: auto;
+        left: 25px;
+    }
+    .addressContent p {
+        margin-top: 0px;
+        color: rgb(70, 70, 70);
+        line-height: 18px;
+        text-align: center;
+    }
+    .addressContent h4 {
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    .mentions {
+        padding: 1em 0 1em 0;
+    }
+    .baneerContent h1 {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .container {
+        width: 300px;
+    }
+    .top nav {
+        margin-top: 10px;
+    }
+    .top nav p .fas {
+        position: relative;
+        top: 5px;
+        right: 15px;
+    }
+    .logo img {
+        float: left;
+        width: 30px;
+        height: auto;
+        margin-top: 1em;
+    }
+    .logo p {
+        float: left;
+        margin: 2.5em 0 0 0;
+        font-family: 'Gill_Sans_Nova';
+        font-size: 10px;
+    }
+    .top nav>a {
+        font-family: 'Gill_Sans_Nova';
+        text-decoration: none;
+        color: black;
+        position: absolute;
+        right: 60px;
+        top: 14px;
+        font-size: 12px;
+    }
+    .baneerContent {
+        margin: auto;
+        padding-top: 2em;
+        width: 100%;
+    }
+    .baneerContent img {
+        width: 200px;
+        height: auto;
+        display: block;
+        margin: auto;
+    }
+    .baneerContent p {
+        text-align: center;
+        padding-left: 10em;
+        font-size: 10px;
+    }
+    .baneerContent1 h1 {
+        font-size: 1.5em;
+        padding-bottom: 50px;
+    }
+    .baneer {
+        background-color: #e8e8e8;
+        position: relative;
+        padding-bottom: 1em;
+    }
+    .triangle-Bottom {
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+        margin-bottom: 50px;
+        margin-top: 0;
+    }
+    .triangleBottom {
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+    }
+    .backBaneer {
+        height: 200em;
+    }
+    .btn {
+        width: 50%;
+    }
+    .triangleTop {
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+    }
+    .section8 .triangleTop {
+        border-left: 150px solid transparent;
+        border-right: 150px solid transparent;
+        margin-top: 5em;
+    }
+    .galery div {
+        border: solid 3px blue;
+        background-color: blue;
+        width: 95%;
+        height: 20em;
+        margin: 5%;
+    }
+    .section7 .resumeContent h2 {
+        width: 100%;
+    }
+    .section7 .resumeContent p {
+        font-family: 'Gill_Sans_Nova';
+        width: 100%;
+    }
+    .galery .cube1 {
+        left: 85px;
+    }
+    .galery .cube2 {
+        top: 960px;
+        left: 85px;
+    }
+    .galery .cube3 {
+        left: 85px;
+    }
+    .galery .cube4 {
+        top: 1340px;
+        left: 85px;
+    }
+    .lineBottom {
+        margin: -200px auto 0px;
+    }
+    .baneer1 {
+        background-color: #141E60;
+        position: relative;
+        margin-bottom: 0em;
+        color: white;
+        padding-bottom: 50px;
+    }
+    .section1 .resumeContent hr {
+        width: 16%;
+        margin: auto;
+        height: 4px;
+        background-color: #0d325f;
+        margin-top: 10px;
+    }
+    .section1 .resumeImg img {
+        display: none;
+    }
+    .section1 .resumeContent .btn {
+        margin: auto;
+        width: 100%;
+        font-size: 15px;
+        padding: 10px 5px 10px 5px;
+    }
+    .section1 .resumeContent {
+        float: left;
+        width: 100%;
+        text-align: center;
+        margin-top: 0;
+    }
+    .section1 .resumeContent h3 {
+        font-weight: 200;
+        font-size: 20px;
+    }
+    .section1 .resumeContent h2 {
+        font-size: 20px;
+    }
+    .section1 .resumeContent p {
+        font-size: 15px;
+    }
+    .backGrid {
+        height: 55em;
+    }
+    .backGrid .entitled h2 {
+        font-size: 20px;
+    }
+    .backGrid .entitled p {
+        font-size: 15px;
+        text-align: center;
+    }
+    /* //////////boutons */
+    .btn {
+        border: solid 4px #278bca;
+        width: 70%;
+        padding: 15PX 50px 15px 50px;
+        text-decoration: none;
+        color: #278bca;
+        text-align: center;
+        font-family: 'Gill_Sans_Nova';
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 1px;
+        transition: 0.25s;
+        display: block;
+    }
+    .btn:hover {
+        background-color: #278bca;
+        color: white;
+    }
+    .btn i {
+        font-size: 20px;
+    }
+    /* //////////vertical lines */
+    /*  */
+    .contactBaneer {
+        padding-bottom: 5em;
+    }
+    .top nav>p {
+        right: 30px;
+        top: -8px;
+        font-size: 15px;
+    }
+    .contactSection1 .resumeContent .tel {
+        font-size: 20px;
+    }
+    main .verticalLine {
+        width: 2px;
+        height: 200px;
+        background-color: #000;
+        margin: 0em auto 0em;
+    }
+    main .verticalLine2 {
+        width: 2px;
+        height: 200px;
+        background-color: #000;
+        margin: -5em auto 0em;
+    }
+    .point {
+        width: 10px;
+        height: 10px;
+        border: solid 2px #090E2B;
+        border-radius: 50%;
+        background-color: #090E2B;
+        margin: 0 auto 2em;
+    }
+    .section3Content img {
+        display: none;
+    }
+    /*///////// card */
+    .cardGrid {
+        position: relative;
+    }
+    .card {
+        width: 100%;
+        margin-top: 3em;
+        float: left;
+        padding: 0 30px 0 30px;
+    }
+    .card .btn {
+        width: 100%;
+        padding: 10px
+    }
+    .cardTitle {
+        width: 75%;
+        float: left;
+        position: absolute;
+        background-color: black;
+        padding: 10px;
+        left: 15px;
+        top: -15px;
+        opacity: 0.8;
+        font-size: 12px;
+        height: 120px;
+    }
+    .cardTitle h3 {
+        font-size: 20px;
+        padding: 15px
+    }
+    .cardTitle h3 span {
+        font-weight: bold;
+    }
+    .number {
+        display: none;
+    }
+    .number p {
+        margin: 25px 0 10px 0;
+        font-weight: bold;
+    }
+    .cardBlue {
+        left: 0;
+    }
+    .cardBrown {
+        right: 0;
+        top: 1000px;
+    }
+    .cardYellow {
+        left: 0;
+        top: 500px;
+    }
+    .btnBrown {
+        width: 60%;
+        border: solid 4px #802C0E;
+        color: #802C0E;
+    }
+    .btnBrown:hover {
+        background-color: #802C0E;
+        color: white;
+    }
+    .btnYellow {
+        width: 60%;
+        border: solid 4px #A88417;
+        color: #A88417;
+    }
+    .btnYellow:hover {
+        background-color: #A88417;
+        color: white;
+    }
+    .backGrid {
+        height: 108em;
+    }
+    .content {
+        padding-top: 12em;
+    }
+    .content p {
+        padding: 0px 20px 20px 20px;
+        font-size: 13px;
+    }
+    .content img {
+        left: 95px;
+        bottom: 260px;
+        width: 100px;
+    }
+    .cardYellow {
+        right: 320px;
+    }
+    .section3Content {
+        padding-top: 8em;
+        width: 100%;
+    }
+    .section3Content .resume {
+        width: 100%;
+        text-align: center;
+        padding: 0 50px 0 50px;
+    }
+    .resume hr {
+        margin: auto;
+        margin-top: 20px;
+        background-color: #0d325f;
+    }
+    .resume h3 {
+        font-size: 20px;
+    }
+    .resume h2 {
+        font-size: 20px;
+        letter-spacing: 2px;
+    }
+    .resume p {
+        font-size: 15px;
+    }
+    /*////////// logos patenaires */
+    .section3Content {
+        padding-top: 2em;
+        width: 100%;
+    }
+    .logoPartners {
+        width: 80%;
+        padding-top: 20px;
+        margin: auto;
+    }
+    .logoPartners a {
+        position: absolute;
+    }
+    .logoPartners a img {
+        position: absolute;
+        height: 100px;
+        width: auto;
+    }
+    .logoPartners a .logo1 {
+        left: 10px;
+        height: 50px;
+    }
+    .logoPartners a .logo2 {
+        left: 150px;
+        height: 50px;
+    }
+    .logoPartners a .logo3 {
+        left: 10px;
+        top: 90px;
+        height: 50px;
+    }
+    .logoPartners a .logo4 {
+        left: 150px;
+        top: 90px;
+        height: 50px;
+    }
+    .section4 h2 {
+        font-family: 'Ebrima';
+        font-weight: 200;
+        font-size: 20px;
+        margin: 0 0 0 0;
+        letter-spacing: 1px;
+    }
+    /*  */
+    footer {
+        font-family: 'Gill_Sans_Nova';
+        margin-top: 4em;
+        height: 700px;
+        position: relative;
+        background-color: #e8e8e8;
+    }
+    .section3 .backContent {
+        background-color: #e8e8e8;
+        height: 600px;
+        margin-top: 3em;
+    }
+    .section3 {
+        height: 600px;
+        margin-top: 15em;
+    }
+    .section4 .btn {
+        margin: auto;
+        width: 80%;
+        font-size: 15px;
+        padding: 10px 5px 10px 5px;
+    }
+    .contact {
+        width: 100%;
+        position: absolute;
+        left: 0px;
+        top: 250px;
+        padding: 20px 10px 10px 10px;
+    }
+    .contact h4 {
+        text-align: center;
+    }
+    .contact .btn {
+        width: 100%;
+        padding: 10px
+    }
+    .contact .mail a {
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+    }
+    .contact hr {
+        height: 2px;
+        width: 100%;
+        margin: 10px 0 10px 0;
+    }
+    .phone {
+        text-align: center;
+    }
+    .mail {
+        text-align: center;
+    }
+    .formations {
+        display: none;
+    }
+    .section6 {
+        padding-top: 350px;
+    }
+    .address {
+        width: 100%;
+        padding: 20px 0 10px 10px;
+    }
+    .address img {
+        position: absolute;
+        width: 150px;
+        height: auto;
+        left: 70px;
+    }
+    .addressContent {
+        padding-top: 130px;
+    }
+    .addressContent p {
+        margin-top: 0px 0 0 50px;
+        color: rgb(70, 70, 70);
+        line-height: 18px;
+        text-align: center;
+    }
+    .addressContent h4 {
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    .mentions {
+        padding: 1em 0 1em 0;
+        margin-top: 15em;
+    }
+    .baneerContent h1 {
+        font-size: 1.5em;
+        letter-spacing: 8px;
+    }
+    .mentions p {
+        font-size: 10px;
+    }
+    aside {
+        width: 100%;
+    }
+    aside .rectangle {
+        position: absolute;
+        border: solid 3px #278bca;
+        background-color: #278bca;
+        width: 100px;
+        height: 160px;
+        top: 480px;
+    }
+    aside .legend {
+        position: absolute;
+        top: 480px;
+        left: 100px;
+    }
+    .formation-card .description {
+        width: 100%;
+        left: 0px;
+    }
+    .vertical {
+        margin-left: -3px;
+        top: 105px;
+        left: 65px;
+        height: 75px;
+    }
+    aside .btn {
+        top: 15em;
+        left: -100px;
+        width: 240px;
+        font-size: 12px;
+        font-weight: bold;
+        transition: 0.25s;
+        display: block;
+    }
+    .formation-card2 {
+        margin-top: 850px;
+    }
+    .section8 .backGrid {
+        background-image: linear-gradient( #e8e8e8, #e8e8e8, white);
+        height: 115em;
+    }
+    .section4-1>.btn-1 {
+        border: solid 4px #278bca;
+        width: 100%;
+        padding: 10px 20px 10px 20px;
+        font-size: 15px;
+    }
+    .section4-h2 {
+        font-size: 15px;
+    }
+    /* Modal Content */
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%;
+        font-family: 'Gill_Sans_Nova';
+        color: rgb(108, 108, 109);
+        text-align: center;
+        font-size: 1.5em;
+    }
+    /* .modal-content .modal-title-1 {
+        position: absolute;
+        top: 150px;
+    } */
+    .modal-content h2 a {
+        font-family: 'Comfortaa';
+        font-size: 25px;
+        text-decoration: none;
+        color: rgb(108, 108, 109);
+    }
+    .modal-content h2 a:hover {
+        color: rgb(0, 0, 0);
+        font-size: 28px;
+        transition: 0.2s;
+    }
+    .modal-content>ul>li>a {
+        text-decoration: none;
+        color: rgb(108, 108, 109);
+        padding-top: 25px;
+    }
+    .modal-content>ul {
+        list-style-type: none;
+        padding-left: 0;
+        margin: 0 1em 3em 0;
+    }
+    .modal-content>ul>li {
+        margin-top: 1em;
+        height: 30px;
+    }
+    .modal-content .blue:hover {
+        color: #278bca;
+        font-size: 25px;
+        transition: 0.2s;
+    }
+    .modal-content .yellow:hover {
+        color: #A88417;
+        font-size: 25px;
+        transition: 0.5s;
+    }
+    .modal-content .brown:hover {
+        color: #802C0E;
+        font-size: 25px;
+        transition: 0.5s;
+    }
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: right;
+        font-size: 60px;
+        font-weight: bold;
+    }
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+        -webkit-transition: -webkit-transform .5s ease-in-out;
+        -ms-transition: -ms-transform .5s ease-in-out;
+        transition: transform .5s ease-in-out;
+    }
+    .close:hover {
+        -webkit-transform: rotate(-90deg) translate(0px, 0px);
+        transform: rotate(-90deg) translate(0px, 0px);
+    }
+}
