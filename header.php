@@ -17,8 +17,8 @@
                 </a>
 
                 <nav>
-                    <p id="myBtn" class="burger menu" onClick="myFunction(this)">Menu</p>
-                    <div id="myBtn1" class=" burger" onClick="myFunction(this)">
+                <p id="myBtn" class="burger menu" onclick="myFunction(this)" href=""<?php echo get_permalink(7); ?>">Menu</p>
+                    <div id="myBtn1" class="burger" onclick="myFunction(this)">
                         <div class="bar1"></div>
                         <div class="bar2"></div>
                         <div class="bar3"></div>
@@ -26,23 +26,15 @@
 
                     <!-- MODAL -->
                     <div id="myModal" class="modal">
+                    
                         <div class="modal-content">
+                        <?php wp_nav_menu(); ?>
                             <span class="close">&times;</span>
-                            <h2 class="modal-title-1"><a href="#">LES FORMATIONS</a></h2>
-                            <ul>
-                                <li>
-                                    <a class="blue" href="#">Dévéloppement Web</a>
-                                </li>
-                                <li>
-                                    <a class="yellow" href="#">Graphisme & PAO</a>
-                                </li>
-                                <li>
-                                    <a class="brown" href="#">Photo & Vidéo</a>
-                                </li>
-                            </ul>
-                            <h2 class="modal-title-2"><a href="#">NOUS CONTACTER</a></h2>
+                            
                         </div>
                     </div>
+                    <!-- fin MODAL -->
+
                     <!-- fin MODAL -->
 
                 </nav>

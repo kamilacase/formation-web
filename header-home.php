@@ -22,7 +22,7 @@
         <header>
             <div class="top">
                 <a class="logo" href="#">
-                    <img src="Maquette/ressources/logo_formation_numerique_50x50.png" alt="logo formation numérique">
+                    <img src='Maquette/ressources/logo_formation_numerique_50x50.png' alt="logo formation numérique">
                     <p>FORMATIONS NUMERIQUE</p>
                 </a>
 
@@ -41,19 +41,7 @@
                         <div class="modal-content">
                         <?php wp_nav_menu(); ?>
                             <span class="close">&times;</span>
-                            <h2><a href="<?php echo get_permalink(9); ?>">LES FORMATIONS</a></h2>
-                            <ul>
-                            <li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
-                                    <a class="blue" href="<?php echo get_permalink(11); ?>">Dévéloppement Web</a>
-                                </li>
-                                <li id="menu-item-26" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-26">
-                                    <a class="yellow" href="<?php echo get_permalink(13); ?>">Graphisme & PAO</a>
-                                </li>
-                                <li id="menu-item-24" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-24">
-                                    <a class="brown" href="<?php echo get_permalink(15); ?>">Photo & Vidéo</a>
-                                </li>
-                            </ul>
-                            <h2><a href="<?php echo get_permalink(19); ?>">NOUS CONTACTER</a></h2>
+                            
                         </div>
                     </div>
                     <!-- fin MODAL -->

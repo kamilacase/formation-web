@@ -18,13 +18,10 @@ template name: front-page
 
                 <div class="resumeContent">
 
-                    <h3>POUR TOUS LES NIVEAUX</h3>
-                    <H2>SE FORMER AU WEB ET AU NUMERIQUE</H2>
+                    <h3><?php echo get_field('home_section1_titre1');?></h3>
+                    <H2><?php echo get_field('home_section1_titre2');?></H2>
                     <hr>
-                    <P>Good, I'll see you tonight. Don't forget, now, 1:15 a.m., Twin Pines Mall. Don't tell me. Uh,
-                        you want me to buy a
-                        subscription to the Saturday Evening Post? Ahh. Huh? Good. Have a good trip Einstein, watch
-                        your head.</P>
+                    <P><?php echo get_field('home_section1_paragraphe');?></P>
                     <a class="btn" href="#">en savoir plus <i class="fas fa-chevron-right"></i></a>
                 </div>
 
@@ -38,36 +35,22 @@ template name: front-page
                 <div class="triangleTop"></div>
                 <div class="backGrid">
                     <div class="entitled">
-                        <h2>POUR LES PARTICULIERS ET LES PROFESSIONNELS</h2>
+                        <h2><?php echo get_field('home_section2_titre1');?></h2>
                         <hr>
-                        <p>Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering
-                            animata
-                            corpora quaeritis.
-                            Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum
-                            mauris.</p>
+                        <p><?php echo get_field('home_section1_paragraphe');?></p>
                     </div>
                     <div class="cardGrid">
 
                         <div class="card cardBlue">
                             <div class="cardTitle">
-                                <h3>FORMATIONS<br><span>DEVELOPPEMENT WEB</span></h3>
+                                <h3><?php _e('FORMATIONS'); ?><br><span><?php echo get_field('card1_title'); ?></span></h3>
                             </div>
                             <div class="number">
-                                <p>.01</p>
+                                <p><?php _e('.'); echo get_field('card1_number'); ?></p>
                             </div>
                             <div class="content content1">
-                                <img src="Maquette/ressources/picto_web_200x200.png" alt="pictogramme web">
-                                <p>Lorizzle ipsizzle fo shizzle mah nizzle fo rizzle, mah home g-dizzle bizzle amizzle,
-                                    funky
-                                    fresh
-                                    adipiscing elit.
-                                    Ghetto shizzlin dizzle fo, we gonna chung volutpizzle, uhuh ... yih! quis, gravida
-                                    vel,
-                                    stuff.
-                                    Pellentesque cool
-                                    tortor. Boofron doggy. Break yo neck, yall izzle dolor dapibizzle turpizzle
-                                    tempizzle
-                                    dawg.</p>
+                                <img src="<?php echo get_field('card1_picto'); ?> alt="pictogramme web">
+                                <p><?php echo get_field('card1_paragraphe'); ?></p>
                             </div>
                             <a class="btn btnBlue" href="#">en savoir plus <i class="fas fa-chevron-right"></i></a>
                         </div>
