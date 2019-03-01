@@ -13,7 +13,7 @@ template name: front-page
 
             <section class="section1">
                 <div class="resumeImg">
-                    <img src="Maquette/ressources/logo_ecran_300x300.png" alt="logo écran">
+                <img src="<?php echo get_template_directory_uri(); ?>/Maquette/ressources/logo_ecran_300x300.png" alt="logo écran">
                 </div>
 
                 <div class="resumeContent">
@@ -49,7 +49,11 @@ template name: front-page
                                 <p><?php _e('.'); echo get_field('card1_number'); ?></p>
                             </div>
                             <div class="content content1">
-                                <img src="<?php echo get_field('card1_picto'); ?> alt="pictogramme web">
+                            <?php 
+                                $image = get_field('card1_picto');
+                                    if( !empty($image) ): ?>
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                    <?php endif; ?>
                                 <p><?php echo get_field('card1_paragraphe'); ?></p>
                             </div>
                             <a class="btn btnBlue" href="#">en savoir plus <i class="fas fa-chevron-right"></i></a>
@@ -57,48 +61,28 @@ template name: front-page
 
                         <div class="card cardYellow">
                             <div class="cardTitle">
-                                <h3>FORMATIONS<br><span>GRAPHISME & PAO</span></h3>
+                                <h3>FORMATIONS<br><span><?php echo get_field('card2_title'); ?></span></h3>
                             </div>
                             <div class="number">
-                                <p>.02</p>
+                                <p><?php _e('.'); echo get_field('card2_number'); ?></p>
                             </div>
                             <div class="content content2">
-                                <img src="Maquette/ressources/picto_pao_200x200.png" alt="pictogramme PAO">
-                                <p>Lorizzle ipsizzle fo shizzle mah nizzle fo rizzle, mah home g-dizzle bizzle amizzle,
-                                    funky
-                                    fresh
-                                    adipiscing elit.
-                                    Ghetto shizzlin dizzle fo, we gonna chung volutpizzle, uhuh ... yih! quis, gravida
-                                    vel,
-                                    stuff.
-                                    Pellentesque cool
-                                    tortor. Boofron doggy. Break yo neck, yall izzle dolor dapibizzle turpizzle
-                                    tempizzle
-                                    dawg.</p>
+                            <img <?php echo get_field('card2_picto'); ?> alt="pictogramme PAO">
+                                <p><?php echo get_field('card2_paragraphe'); ?></p>
                             </div>
                             <a class="btn btnYellow" href="#">en savoir plus <i class="fas fa-chevron-right"></i></a>
                         </div>
 
                         <div class="card cardBrown">
                             <div class="cardTitle">
-                                <h3>FORMATIONS<br><span>PHOTO & VIDEO</span></h3>
+                                <h3>FORMATIONS<br><span><?php echo get_field('card3_title'); ?></span></h3>
                             </div>
                             <div class="number">
-                                <p>.03</p>
+                            <p><?php _e('.'); echo get_field('card3_number'); ?></p>
                             </div>
                             <div class="content content3">
-                                <img src="Maquette/ressources/picto_photo_200x200.png" alt="pictogramme camera">
-                                <p>Lorizzle ipsizzle fo shizzle mah nizzle fo rizzle, mah home g-dizzle bizzle amizzle,
-                                    funky
-                                    fresh
-                                    adipiscing elit.
-                                    Ghetto shizzlin dizzle fo, we gonna chung volutpizzle, uhuh ... yih! quis, gravida
-                                    vel,
-                                    stuff.
-                                    Pellentesque cool
-                                    tortor. Boofron doggy. Break yo neck, yall izzle dolor dapibizzle turpizzle
-                                    tempizzle
-                                    dawg.</p>
+                            <img <?php echo get_field('card3_picto'); ?> alt="pictogramme PHOTO">
+                                <p><?php echo get_field('card3_paragraphe'); ?></p>
                             </div>
                             <a class="btn btnBrown" href="#">en savoir plus <i class="fas fa-chevron-right"></i></a>
                         </div>
