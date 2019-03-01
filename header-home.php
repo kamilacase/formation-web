@@ -21,8 +21,10 @@
 
         <header>
             <div class="top">
-                <a class="logo" href="#">
-                    <img src='Maquette/ressources/logo_formation_numerique_50x50.png' alt="logo formation numérique">
+            <a class="logo" href="<?php bloginfo('url'); ?>">
+
+>
+                <img src="<?php echo get_template_directory_uri(); ?>/Maquette/ressources/logo_formation_numerique_50x50.png" alt="logo formation numérique">
                     <p>FORMATIONS NUMERIQUE</p>
                 </a>
 
@@ -52,7 +54,7 @@
             <div class="backBanner">
                 <div class="baneer">
                     <div class="baneerContent">
-                        <img src="Maquette/ressources/logo_formation_numerique_500x500.png" alt="logo formation numérique">
+                    <img src="<?php echo get_template_directory_uri(); ?>/Maquette/ressources/logo_formation_numerique_500x500.png" alt="logo formation numérique">
                         <h1><span>FORMATIONS</span><br> NUMERIQUE</h1>
                         <p>PAR <span>AFA MULTIMEDIA</span></p>
                     </div>

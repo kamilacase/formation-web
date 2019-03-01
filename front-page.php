@@ -22,7 +22,7 @@ template name: front-page
                     <H2><?php echo get_field('home_section1_titre2');?></H2>
                     <hr>
                     <P><?php echo get_field('home_section1_paragraphe');?></P>
-                    <a class="btn" href="#">en savoir plus <i class="fas fa-chevron-right"></i></a>
+                    <a class="btn" href="<?php bloginfo('url'); ?>/index.php/contact/">en savoir plus <i class="fas fa-chevron-right"></i></a>
                 </div>
 
             </section>
@@ -56,7 +56,7 @@ template name: front-page
                                     <?php endif; ?>
                                 <p><?php echo get_field('card1_paragraphe'); ?></p>
                             </div>
-                            <a class="btn btnBlue" href="#">en savoir plus <i class="fas fa-chevron-right"></i></a>
+                            <a class="btn btnBlue" href="<?php echo get_permalink(11); ?>">En savoir plus ... <i class="fas fa-chevron-right"></i></a>
                         </div>
 
                         <div class="card cardYellow">
@@ -67,10 +67,14 @@ template name: front-page
                                 <p><?php _e('.'); echo get_field('card2_number'); ?></p>
                             </div>
                             <div class="content content2">
-                            <img <?php echo get_field('card2_picto'); ?> alt="pictogramme PAO">
+                            <?php 
+                            $image = get_field('card2_picto');
+                                    if( !empty($image) ): ?>
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                    <?php endif; ?>
                                 <p><?php echo get_field('card2_paragraphe'); ?></p>
                             </div>
-                            <a class="btn btnYellow" href="#">en savoir plus <i class="fas fa-chevron-right"></i></a>
+                            <a class="btn btnYellow" href="<?php echo get_permalink(13); ?>">En savoir plus... <i class="fas fa-chevron-right"></i></a>
                         </div>
 
                         <div class="card cardBrown">
@@ -81,10 +85,14 @@ template name: front-page
                             <p><?php _e('.'); echo get_field('card3_number'); ?></p>
                             </div>
                             <div class="content content3">
-                            <img <?php echo get_field('card3_picto'); ?> alt="pictogramme PHOTO">
+                            <?php 
+                            $image = get_field('card3_picto');
+                                    if( !empty($image) ): ?>
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                    <?php endif; ?>
                                 <p><?php echo get_field('card3_paragraphe'); ?></p>
                             </div>
-                            <a class="btn btnBrown" href="#">en savoir plus <i class="fas fa-chevron-right"></i></a>
+                            <a class="btn btnBrown" href="<?php echo get_permalink(15); ?>">En savoir plus... <i class="fas fa-chevron-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -95,7 +103,7 @@ template name: front-page
 
                 <div class="backContent">
                     <div class="section3Content">
-                        <img src="Maquette/ressources/picto_hand_300X300.png" alt="logo handshake">
+                    <img src="<?php echo get_template_directory_uri(); ?>/Maquette/ressources/picto_hand_300X300.png" alt="logo handshake">
                         <div class="resume">
                             <h3>PARTENAIRES & INSTITUTIONS</h3>
                             <H2>ILS NOUS FONT CONFIANCE</H2>
@@ -126,7 +134,7 @@ template name: front-page
             <section class="section4">
                 <H2>POUR TOUS RENSEIGNEMENTS, N'HÉSITEZ PAS A NOUS CONTACTER</H2>
                 <hr>
-                <a class="btn" href="#">Nous contacter <i class="fas fa-chevron-right"></i></a>
+                <a class="btn" href="<?php bloginfo('url'); ?>/index.php/contact/">Nous contacter <i class="fas fa-chevron-right"></i></a>
             </section>
 
         </main>

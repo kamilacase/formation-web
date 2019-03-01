@@ -11,8 +11,8 @@
 
         <header>
             <div class="top">
-                <a class="logo" href="#">
-                    <img src="Maquette/ressources/logo_formation_numerique_50x50.png" alt="logo formation numérique">
+            <a class="logo" href="<?php bloginfo('url'); ?>">
+            <img src="<?php echo get_template_directory_uri(); ?>/Maquette/ressources/logo_formation_numerique_50x50.png" alt="logo formation numérique">
                     <p>FORMATIONS NUMERIQUE !!</p>
                 </a>
 

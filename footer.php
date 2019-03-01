@@ -3,7 +3,7 @@
 
                 <div class="bottomGrid">
                     <div class="address">
-                        <img src="Maquette/ressources/logo_formation_numerique_500x500.png" alt="logo formation numérique">
+                    <img src="<?php echo get_template_directory_uri(); ?>/Maquette/ressources/logo_formation_numerique_500x500.png" alt="logo formation numérique">
                         <div class="addressContent">
                             <h4>FORMATIONS NUMERIQUE</h4>
                             <P>PAR AFA-MULTIMEDIA <br>24 Avenue de la République <br>48200 Bourgs-sur-Colagne</P>
