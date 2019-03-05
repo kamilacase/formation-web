@@ -618,6 +618,7 @@ aside .btn i {
     text-align: justify;
     font-family: 'Gill_Sans_Nova';
     font-size: 20px;
+    
 }
 
 .description .number {
@@ -638,11 +639,7 @@ aside .btn i {
     color: #278bca;
 }
 
-.section4-1 {
-    width: 60%;
-    font-size: 15px;
-    margin: auto;
-}
+
 
 .section4-1>.btn-1 {
     border: solid 4px #278bca;
@@ -942,7 +939,12 @@ aside .btn i {
     text-align: center;
     margin-top: 3em;
 }
-
+.section4-1 {
+    width: 60%;
+    font-size: 15px;
+    margin: auto;
+    margin-top:15em;
+}
 .section4 h2 {
     font-family: 'Ebrima';
     font-weight: 200;
