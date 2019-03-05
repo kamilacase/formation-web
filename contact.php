@@ -22,37 +22,9 @@ Template Name: contact
             </section>
 
             <section class="contactForm">
-                <form action="" method="post">
-                    <div class="nom form">
-                        <label for="nom">Nom</label>
-                        <input class="input1" type="text">
-                    </div>
-                    <div class="prenom form">
-                        <label for="prenom">Prénom</label>
-                        <input class="input2" type="text">
-                    </div>
-                    <div class="nom-entreprise form">
-                        <label for="nom-entreprise">Nom de l'entreprise</label>
-                        <input class="input3" type="text">
-                    </div>
-                    <div class="telephone form">
-                        <label for="telephone">Téléphone</label>
-                        <input class="input4" type="tel" name="telephone" id="tel">
-                    </div>
-                    <div class="email form">
-                        <label for="mail">Mail</label>
-                        <input class="input5" type="email" name="mail" id="mail">
-                    </div>
-                    <div class="sujet form">
-                        <label for="sujet">Sujet</label>
-                        <input class="input6" type="text">
-                    </div>
-                    <div class="message">
-                        <label for="message">Message</label>
-                        <textarea name="message" id="message" cols="135" rows="15"></textarea>
-                    </div>
-                    <button class="btn" type="submit">Envoyer <i class="fas fa-chevron-right"></i></button>
-                </form>
+            <?php echo do_shortcode( '[contact-form-7 id="5" title="Contact form 1"]'); ?>
+               
+                <p class="clause">Les champs dotés d'une * sont requis.<p>
             </section>
 
             <section>
