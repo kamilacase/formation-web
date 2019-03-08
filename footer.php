@@ -28,7 +28,7 @@
                         <hr>
                         <div class="mail">
                             <i class="far fa-envelope"></i><br>
-                            <a href="mailto:contact@formation-numérique.com">contact@formation-numérique.com</a>
+                            <a href="<?php echo get_permalink(19); ?>">contact@formation-numérique.com</a>
                         </div>
                     </div>
                 </div>
