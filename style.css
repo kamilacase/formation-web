@@ -311,7 +311,7 @@ header {
 .lineBottom2 {
     margin: -2em auto 0;
     position: relative;
-    z-index: 1;
+    z-index: 5;
 }
 
 .verticalLine2 {
@@ -827,7 +827,7 @@ aside .btn i {
 
 .section3 {
     height: 700px;
-    margin-top: 15em;
+    margin-top: 30em;
 }
 
 .section3 .backContent {
@@ -837,6 +837,7 @@ aside .btn i {
     position: relative;
     width: 100%;
     background-size: cover;
+    z-index: 3;
 }
 
 .section3 .backContent::after {
@@ -904,32 +905,33 @@ aside .btn i {
     width: 80%;
     padding-top: 80px;
     position: relative;
+    z-index: 1;
 }
 
 .logoPartners a {
-    position: absolute;
+    position: relative;
 }
 
 .logoPartners a img {
-    position: absolute;
+    position: relative;
     height: 150px;
     width: auto;
 }
 
-.logoPartners a .logo1 {
+.logoPartners >.logo1 {
     left: 150px;
 }
 
-.logoPartners a .logo2 {
-    left: 475px;
+.logoPartners>.logo2 {
+    left: 250px;
 }
 
-.logoPartners a .logo3 {
-    left: 775px;
+.logoPartners .logo3 {
+    left: 400px;
 }
 
-.logoPartners a .logo4 {
-    left: 1100px;
+.logoPartners .logo4 {
+    left: 500px;
 }
 
 

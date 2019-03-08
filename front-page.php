@@ -119,10 +119,27 @@ template name: front-page
                     </div>
 
                     <div class="logoPartners">
-                        <a href="#"><img class="logo1" src="Maquette/ressources/logo_UPVD.png" alt="logo UPVD"></a>
-                        <a href="#"><img class="logo2" src="Maquette/ressources/logo_IUT_300x300.jpg" alt="logo IUT"></a>
-                        <a href="#"><img class="logo3" src="Maquette/ressources/logo_UPVD.png" alt="logo UPVD"></a>
-                        <a href="#"><img class="logo4" src="Maquette/ressources/logo_IUT_300x300.jpg" alt="logo IUT"></a>
+                        
+                                 <a class="logo1" href="#"><?php 
+                            $image = get_field('partenaire_logo');
+                                    if( !empty($image) ): ?>
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                    <?php endif; ?></a>
+                                    <a class="logo2" href="#"><?php 
+                            $image = get_field('partenaire_logo1');
+                                    if( !empty($image) ): ?>
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                    <?php endif; ?></a>
+                                    <a class="logo3" href="#"><?php 
+                            $image = get_field('partenaire_logo2');
+                                    if( !empty($image) ): ?>
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                    <?php endif; ?></a>
+                                    <a class="logo4" href="#"><?php 
+                            $image = get_field('partenaire_logo3');
+                                    if( !empty($image) ): ?>
+                                        <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+                                    <?php endif; ?></a>
                     </div>
                 </div>
                 <div class="triangleBottom2"></div>
