@@ -124,10 +124,12 @@ h3 {
     font-size: 1.5em;
     position: relative;
     list-style-type: none;
+    text-decoration: none;
 }
 .modal-content ul {
     list-style-type: none;
     padding-left:0;
+    color: rgb(108, 108, 109);
 }
 
 #menu-item-27 {
@@ -136,8 +138,14 @@ h3 {
     text-decoration: none;
     color: rgb(108, 108, 109);
     text-decoration: none;
+    margin-right: 0;
     
 }
+
+#menu-item-23 {
+    margin-right: 0;
+}
+
 .sub-menu {
     padding-bottom: 0;
     margin-top: 2em;
@@ -164,11 +172,28 @@ h3 {
     list-style-type: none;
     padding-left: 0;
     margin: 0 1em 3em 0;
+    color: rgb(108, 108, 109);
 }
 
+#menu-item-27 > a:nth-child(1), 
+#menu-item-26 > a:nth-child(1), 
+#menu-item-25 > a:nth-child(1), 
+#menu-item-24 > a:nth-child(1), 
+#menu-item-23 > a:nth-child(1) {
+    color: rgb(108, 108, 109);
+    text-decoration: none;
+    font-family: 'Gill_Sans_Nova';
+    font-size: 25px;
+}
+
+#menu-item-27 > a:nth-child(1), #menu-item-23 > a:nth-child(1) {
+    font-size: 30px;
+}
+}
 .modal-content>ul>li {
     margin-top: 0em;
     height: 30px;
+    color: rgb(108, 108, 109);
 }
 
 #menu-item-27 > a:nth-child(1):hover {
