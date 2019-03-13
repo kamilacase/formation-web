@@ -6,7 +6,7 @@ template name: front-page
 
 <?php get_header('home'); ?>
 <main>
-            <div class="lineBottom">
+            <div  class="lineBottom">
                 <div class="verticalLine"></div>
                 <div class="point"></div>
             </div>
@@ -153,6 +153,8 @@ template name: front-page
                 <hr>
                 <a class="btn" href="<?php bloginfo('url'); ?>/index.php/contact/">Nous contacter <i class="fas fa-chevron-right"></i></a>
             </section>
+
+            <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
 
         </main>
         <?php get_footer(); ?>

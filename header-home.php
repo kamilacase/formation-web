@@ -17,7 +17,7 @@
 </head>
 
 <body>
-    <div class="container">
+    <div id="haut" class="container">
 
         <header>
             <div class="top">
@@ -39,7 +39,7 @@
                     <div id="myModal" class="modal">
                     
                         <div class="modal-content">
-                        <?php wp_nav_menu('header-menu'); ?>
+                        <?php wp_nav_menu('header_menu'); ?>
                             <span class="close">&times;</span>
                             
                         </div>

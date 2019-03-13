@@ -6,7 +6,7 @@ Template Name: contact
 
 <?php get_header(); ?>
   <main>
-            <div class="lineBottom">
+            <div id="haut" class="lineBottom">
                 <div class="verticalLine"></div>
                 <div class="point"></div>
             </div>
@@ -34,7 +34,7 @@ Template Name: contact
                 </div>
 
             </section>
-
+            <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>  
         </main>
 
         <?php get_footer(); ?>

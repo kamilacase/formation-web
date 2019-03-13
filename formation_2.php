@@ -46,7 +46,7 @@ Template Name: formation graphique
                             </div>
                         </aside>
                         <div class="description">
-                            <h2><?php echo get_field('number-1'); _e('.'); ?></h2>
+                            <h2><?php echo get_field('number-1');_e('.'); ?></h2>
                             <h3 class="formation-title"><?php echo get_field('title-1');?></h3>
                             <p><?php echo get_field('paragraphe-1');?></p>
                         </div>
@@ -66,6 +66,7 @@ Template Name: formation graphique
                             <h3 class="formation-title"><?php echo get_field('title-1');?></h3>
                             <p><?php echo get_field('paragraphe-1');?></p>
                         </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -73,13 +74,12 @@ Template Name: formation graphique
             <section class="section4 section4-1">
                 <H2>L'UNE DE CES FORMATIONS VOUS INTÉRESSE ?<br>ALORS CONTACTEZ-NOUS DÈS MAINTENANT !</H2>
                 <hr>
-                <a class="btn-1" href="<?php bloginfo('url'); ?>/index.php/contact/">Nous contacter <i class="fas fa-chevron-right"></i></a>
+                <a class="btn-1" href="#">Nous contacter <i class="fas fa-chevron-right"></i></a>
             </section>
 
 
 
 
-
+            <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
         </main>
-
 <?php get_footer(); ?>

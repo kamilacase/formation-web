@@ -13,8 +13,8 @@ Template Name: formation photo
             </div>
             <section class="section7">
                 <div class="resumeContent">
-                    <h2><?php echo get_field('section7_title');?><br><?php echo get_field('section7_title_br');?></h2>
-                    <p><?php echo get_field('section7_paragraphe');?></p>
+                    <h2><?php echo get_field('section7-2_title');?><br><?php echo get_field('section7-2_title_br');?></h2>
+                    <p><?php echo get_field('section7-2_paragraphe');?></p>
                 </div>
                 <div class="galery">
                     <div class="cube1"></div>
@@ -33,8 +33,8 @@ Template Name: formation photo
                 <div class="triangleTop"></div>
                 <div class="backGrid">
                     <div class="entitled">
-                        <h2><?php echo get_field('section8_title');?><br><?php echo get_field('section8_title_br');?></h2>
-                        <p><?php echo get_field('section8_paragraphe');?></p>
+                        <h2><?php echo get_field('section8_title');?><br><?php echo get_field('section8-2_title_br');?></h2>
+                        <p><?php echo get_field('section8-2_paragraphe');?></p>
                     </div>
                     <div class="formation-card">
                         <aside>
@@ -46,9 +46,9 @@ Template Name: formation photo
                             </div>
                         </aside>
                         <div class="description">
-                            <h2><?php echo get_field('number');_e('.'); ?></h2>
-                            <h3 class="formation-title"><?php echo get_field('title');?></h3>
-                            <p><?php echo get_field('paragraphe');?></p>
+                            <h2><?php echo get_field('number-2');_e('.'); ?></h2>
+                            <h3 class="formation-title"><?php echo get_field('title-2');?></h3>
+                            <p><?php echo get_field('paragraphe-2');?></p>
                         </div>
                     </div>
 
@@ -62,9 +62,9 @@ Template Name: formation photo
                             </div>
                         </aside>
                         <div class="description">
-                            <h2><?php echo get_field('number');_e('.'); ?></h2>
-                            <h3 class="formation-title"><?php echo get_field('title');?></h3>
-                            <p><?php echo get_field('paragraphe');?></p>
+                            <h2><?php echo get_field('number-2');_e('.'); ?></h2>
+                            <h3 class="formation-title"><?php echo get_field('title-2');?></h3>
+                            <p><?php echo get_field('paragraphe-2');?></p>
                         </div>
                         </div>
                     </div>
@@ -80,7 +80,7 @@ Template Name: formation photo
 
 
 
-
+            <div><a id="cRetour" class="cInvisible" href="#haut"></a></div>
         </main>
 
 <?php get_footer(); ?>

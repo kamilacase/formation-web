@@ -12,6 +12,7 @@
 
                     <div class="formations">
                         <h4>TOUTES NOS FORMATIONS</h4>
+                        <?php if (!function_exists('dynamic_sidebar') || !dynamic_sidebar('<b>footer_middle'))?></b>
                         <a class="btn btn1" href="<?php echo get_permalink(11); ?>">développement web <i class="fas fa-chevron-right"></i></a>
                         <a class="btn btn2" href="<?php echo get_permalink(13); ?>">graphisme & PAO <i class="fas fa-chevron-right"></i></a>
                         <a class="btn btn3" href="<?php echo get_permalink(15); ?>">photo & vidéo <i class="fas fa-chevron-right"></i></a>
